@@ -151,7 +151,6 @@ steps:
           java-version: "21"
           distribution: "corretto"
           # Shouldn't use cache here, custom cache artifact is handled separately
-
     - name: Restore Gradle dependencies & build cache
         # actions/cache/restore only downloads the cache
         # This will save time uploading the cache, since cache
