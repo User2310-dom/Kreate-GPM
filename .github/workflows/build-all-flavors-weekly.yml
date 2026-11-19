@@ -137,23 +137,22 @@ jobs:
           - platform: Github
             architect: Universal
             type: Uncompressed
-
-    steps:
-      - uses: actions/checkout@v7
-        with:
+steps:
+    - uses: actions/checkout@v7
+      with:
           submodules: true
           # Only clone the latest version of repo.
           # Checking for changes happened before this job so
           # it's unnecessary to pull more than needed.
           # Plus, save time for other steps to run
-      - name: Setup Java 21
-        uses: actions/setup-java@v5.5.0
-        with:
+    - name: Setup Java 21
+      uses: actions/setup-java@v5.5.0
+      with:
           java-version: "21"
           distribution: "corretto"
           # Shouldn't use cache here, custom cache artifact is handled separately
 
-      - name: Restore Gradle dependencies & build cache
+    - name: Restore Gradle dependencies & build cache
         # actions/cache/restore only downloads the cache
         # This will save time uploading the cache, since cache
         # builder is handled by another workflow
@@ -168,13 +167,13 @@ jobs:
           # Pulls latest cache artifact
           restore-keys: gradle-${{ runner.os }}-
 
-      - name: Build with Gradle
+    - name: Build with Gradle
         # I.E. assembleGithubX64ProdRelease
        run: ./gradlew "assemble${{ matrix.platform }}${{ matrix.architect }}Debug"
 
-      - name: Get build path
-        id: build_path
-        env:
+    - name: Get build path
+      id: build_path
+      env:
           PLATFORM: ${{ matrix.platform }}
           ARCH: ${{ matrix.architect }}
           BUILD_TYPE: ${{ matrix.type }}
@@ -186,9 +185,9 @@ jobs:
           
           echo "path=composeApp/build/outputs/apk/$LOWERCASE_PLATFORM${ARCH}Prod/$LOWERCASE_BUILD_TYPE" >> $GITHUB_OUTPUT
 
-      - name: Upload artifacts for uploading
-        uses: actions/upload-artifact@v7
-        with:
+    - name: Upload artifacts for uploading
+      uses: actions/upload-artifact@v7
+      with:
           name: ${{ matrix.platform }}-${{ matrix.architect }}-${{ matrix.type }}
           path: ${{ steps.build_path.outputs.path }}/*.apk
 
