@@ -150,7 +150,6 @@ steps:
       with:
           java-version: "21"
           distribution: "corretto"
-          # Shouldn't use cache here, custom cache artifact is handled separately
     - name: Restore Gradle dependencies & build cache
         # actions/cache/restore only downloads the cache
         # This will save time uploading the cache, since cache
@@ -165,7 +164,6 @@ steps:
           key: gradle-${{ runner.os }}-${{ hashFiles('**/gradle-wrapper.properties', '**/libs.versions.toml') }}
           # Pulls latest cache artifact
           restore-keys: gradle-${{ runner.os }}-
-
     - name: Build with Gradle
         # I.E. assembleGithubX64ProdRelease
        run: ./gradlew "assemble${{ matrix.platform }}${{ matrix.architect }}Debug"
