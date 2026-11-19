@@ -139,13 +139,6 @@ jobs:
             type: Uncompressed
 
     steps:
-      # Checkout is placed before reverting keystore because in read
-      # GitHub Action env, the repo gets cloned into another folder
-      # i.e /home/runner/work/Kreate/Kreate
-      # Without cloning first, the keystore will be placed in
-      # /home/runner/work/Kreate/.ignore.d/keystores/production.jks
-      # Which will unintentionally make the build process fail because it
-      # can't find the keystore to sign the apk
       - uses: actions/checkout@v7
         with:
           submodules: true
