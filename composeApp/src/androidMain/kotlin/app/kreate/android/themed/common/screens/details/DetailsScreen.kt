@@ -153,7 +153,7 @@ fun SongDetailsScreen(
         }
     ) {
         val (colorPalette, typography) = LocalAppearance.current
-        val shape = RoundedCornerShape(15.dp)
+        val shape = RoundedCornerShape(0.dp)
 
         LazyColumn(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -165,7 +165,7 @@ fun SongDetailsScreen(
 
             item {
                 val shape = remember {
-                    RoundedCornerShape(15.dp, 15.dp, 0.dp, 0.dp)
+                    RoundedCornerShape(0.dp)
                 }
                 BoxWithConstraints(
                     Modifier.fillMaxWidth( .9f )

@@ -13,7 +13,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import app.kreate.android.Preferences
 import it.fast4x.rimusic.colorPalette
-import it.fast4x.rimusic.enums.ColorPaletteMode
 
 @Composable
 internal fun HeaderIcon(
@@ -42,8 +41,6 @@ internal class Preference {
         @Composable
         fun debugLog(): Boolean = Preferences.RUNTIME_LOG.value
 
-        @Composable
-        fun colorTheme(): ColorPaletteMode = Preferences.THEME_MODE.value
     }
 }
 
@@ -52,10 +49,6 @@ internal class AppBar {
     internal companion object {
 
         @Composable
-        fun contentColor(): Color =
-             when(it.fast4x.rimusic.ui.components.navigation.header.Preference.colorTheme()) {
-                ColorPaletteMode.Light, ColorPaletteMode.System -> colorPalette().text
-                else -> Color.White
-            }
+        fun contentColor(): Color = colorPalette().onAccent
     }
 }

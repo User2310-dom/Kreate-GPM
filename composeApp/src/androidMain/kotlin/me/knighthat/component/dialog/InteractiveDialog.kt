@@ -1,5 +1,7 @@
 package me.knighthat.component.dialog
 
+import androidx.compose.ui.unit.dp
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -22,7 +24,7 @@ interface InteractiveDialog: Dialog {
         @JvmStatic
         fun ButtonModifier( extra: Modifier = Modifier ): Modifier =
             Modifier.wrapContentWidth(align = Alignment.CenterHorizontally)
-                    .clip( RoundedCornerShape(20) )
+                    .clip( RoundedCornerShape(0.dp) )
                     .then( extra )
 
         @JvmStatic

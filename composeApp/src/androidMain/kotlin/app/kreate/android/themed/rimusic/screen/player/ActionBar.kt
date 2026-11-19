@@ -310,7 +310,7 @@ fun BoxScope.ActionBar(
                                         contentDescription = "song_pos_$index",
                                         modifier = Modifier
                                             .padding(end = 5.dp)
-                                            .clip(RoundedCornerShape(5.dp))
+                                            .clip(RoundedCornerShape(0.dp))
                                             .size(30.dp)
                                     )
                                 }

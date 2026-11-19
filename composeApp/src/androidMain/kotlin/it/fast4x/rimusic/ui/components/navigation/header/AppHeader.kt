@@ -26,11 +26,11 @@ class AppHeader(
         @OptIn(ExperimentalMaterial3Api::class)
         @Composable
         fun colors(): TopAppBarColors = TopAppBarColors(
-            containerColor = colorPalette().background0,
-            titleContentColor = colorPalette().text,
-            scrolledContainerColor = colorPalette().background0,
-            navigationIconContentColor = colorPalette().background0,
-            actionIconContentColor = colorPalette().text
+            containerColor = colorPalette().accent,
+            titleContentColor = colorPalette().onAccent,
+            scrolledContainerColor = colorPalette().accent,
+            navigationIconContentColor = colorPalette().onAccent,
+            actionIconContentColor = colorPalette().onAccent
         )
     }
 
@@ -43,7 +43,7 @@ class AppHeader(
         ) {
             Button(
                 R.drawable.chevron_back,
-                colorPalette().favoritesIcon,
+                colorPalette().onAccent,
                 0.dp,
                 24.dp
             ).Draw()

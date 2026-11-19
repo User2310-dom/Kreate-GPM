@@ -30,7 +30,7 @@ interface ConfirmDialog: InteractiveDialog {
                                         .border(
                                             width = 2.dp,
                                             color = Color( android.graphics.Color.RED ).copy( alpha = .3f ),
-                                            shape = RoundedCornerShape(20)
+                                            shape = RoundedCornerShape(0.dp)
                                         )
                                         .padding( vertical = 10.dp ),
             onCancel = ::hideDialog

@@ -485,7 +485,7 @@ fun PlaylistItem(
                         overflow = TextOverflow.Ellipsis,
                         modifier = Modifier
                             .padding(all = 4.dp)
-                            .background(color = Color.White, shape = RoundedCornerShape(4.dp))
+                            .background(color = Color.White, shape = RoundedCornerShape(0.dp))
                             .padding(horizontal = 6.dp, vertical = 6.dp)
                             .align(Alignment.BottomEnd)
                     )

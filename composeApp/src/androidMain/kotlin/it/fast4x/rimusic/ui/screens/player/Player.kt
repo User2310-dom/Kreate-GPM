@@ -47,7 +47,6 @@ import androidx.compose.foundation.pager.PagerDefaults
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -82,6 +81,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.LinearGradientShader
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.asComposeRenderEffect
@@ -483,7 +483,7 @@ fun Player(
                             contentAlignment = Alignment.Center,
                             modifier = Modifier
                                 .alpha(if (amount <= 1) 0.5f else 1f)
-                                .clip(CircleShape)
+                                .clip(RectangleShape)
                                 .clickable(enabled = amount > 1) { amount-- }
                                 .size(48.dp)
                                 .background(colorPalette().background0)
@@ -512,7 +512,7 @@ fun Player(
                             contentAlignment = Alignment.Center,
                             modifier = Modifier
                                 .alpha(if (amount >= 60) 0.5f else 1f)
-                                .clip(CircleShape)
+                                .clip(RectangleShape)
                                 .clickable(enabled = amount < 60) { amount++ }
                                 .size(48.dp)
                                 .background(colorPalette().background0)
@@ -1372,7 +1372,7 @@ fun Player(
                                          }
                                          .conditional(thumbnailType == ThumbnailType.Modern) {
                                              doubleShadowDrop(
-                                                 if (showCoverThumbnailAnimation) CircleShape else thumbnailRoundness.shape,
+                                                 thumbnailRoundness.shape,
                                                  4.dp,
                                                  8.dp
                                              )
@@ -1659,7 +1659,7 @@ fun Player(
                                                            alpha = (2f - startOffset) / 2f
                                                        }
                                                    }
-                                                   .clip(RoundedCornerShape(20.dp))
+                                                   .clip(RoundedCornerShape(0.dp))
                                                    .combinedClickable(
                                                        interactionSource = remember { MutableInteractionSource() },
                                                        indication = null,
@@ -1923,7 +1923,7 @@ fun Player(
                                          }
                                          .conditional(thumbnailType == ThumbnailType.Modern) {
                                              doubleShadowDrop(
-                                                 if (showCoverThumbnailAnimation) CircleShape else thumbnailRoundness.shape,
+                                                 thumbnailRoundness.shape,
                                                  4.dp,
                                                  8.dp
                                              )

@@ -230,7 +230,7 @@ fun ControlButton(
     IconButton(
         modifier = Modifier
             .clip(
-                RoundedCornerShape(20.dp)
+                RoundedCornerShape(0.dp)
             )
             .background(color = Color.LightGray),
         onClick = onClick

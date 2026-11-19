@@ -26,7 +26,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
@@ -43,6 +42,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.layout.onPlaced
@@ -1216,7 +1216,7 @@ fun MediaItemMenu(
                                             contentAlignment = Alignment.Center,
                                             modifier = Modifier
                                                 .alpha(if (amount <= 1) 0.5f else 1f)
-                                                .clip(CircleShape)
+                                                .clip(RectangleShape)
                                                 .clickable(enabled = amount > 1) { amount-- }
                                                 .size(48.dp)
                                                 .background(colorPalette().background0)
@@ -1245,7 +1245,7 @@ fun MediaItemMenu(
                                             contentAlignment = Alignment.Center,
                                             modifier = Modifier
                                                 .alpha(if (amount >= 60) 0.5f else 1f)
-                                                .clip(CircleShape)
+                                                .clip(RectangleShape)
                                                 .clickable(enabled = amount < 60) { amount++ }
                                                 .size(48.dp)
                                                 .background(colorPalette().background0)
@@ -1340,7 +1340,7 @@ fun MediaItemMenu(
                                     modifier = modifier
                                         .background(
                                             color = colorPalette().background0,
-                                            shape = RoundedCornerShape(16.dp)
+                                            shape = RoundedCornerShape(0.dp)
                                         )
                                         .padding(horizontal = 16.dp, vertical = 8.dp)
                                         .animateContentSize()

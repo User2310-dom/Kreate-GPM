@@ -102,7 +102,7 @@ class VerticalNavigationBar(
                             }
                 }
             val button = Button( iconId, textColor, 0.dp, 0.dp, Dp.Unspecified, buttonModifier )
-            val contentModifier = Modifier.clip( RoundedCornerShape(24.dp) )
+            val contentModifier = Modifier.clip( RoundedCornerShape(0.dp) )
                                           .clickable( onClick = { onTabChanged(index) } )
                                           .padding( vertical = 8.dp )
             val result: @Composable () -> Unit = {

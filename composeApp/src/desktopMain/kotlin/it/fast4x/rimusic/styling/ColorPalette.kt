@@ -66,22 +66,22 @@ val DefaultDarkColorPalette = ColorPalette(
     textSecondary = Color(0xffa3a4a6),
     textDisabled = Color(0xff6f6f73),
     iconButtonPlayer = Color(0xffe1e1e2),
-    accent = Color(0xFF2b9348),
+    accent = Color(0xFFFF5722),
     onAccent = Color.White,
     isDark = true
 )
 
 val DefaultLightColorPalette = ColorPalette(
-    background0 = Color(0xfffdfdfe),
-    background1 = Color(0xfff8f8fc),
-    background2 = Color(0xffeaeaf5),
-    background3 = Color(0xffeaeafd),
-    background4 = Color(0xffeaeafd),
+    background0 = Color(0xFFFFFFFF),
+    background1 = Color(0xFFFAFAFA),
+    background2 = Color(0xFFFAFAFA),
+    background3 = Color(0xFFFAFAFA),
+    background4 = Color(0xFFFAFAFA),
     text = Color(0xff212121),
     textSecondary = Color(0xff656566),
     textDisabled = Color(0xff9d9d9d),
     iconButtonPlayer = Color(0xff212121),
-    accent = Color(0xFF2b9348),
+    accent = Color(0xFFFF5722),
     onAccent = Color.White,
     isDark = false
 )

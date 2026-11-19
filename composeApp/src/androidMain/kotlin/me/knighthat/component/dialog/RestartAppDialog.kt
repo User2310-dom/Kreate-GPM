@@ -65,7 +65,7 @@ object RestartAppDialog: ConfirmDialog {
                                         .border(
                                             width = 2.dp,
                                             color = colorPalette().accent,
-                                            shape = RoundedCornerShape(20)
+                                            shape = RoundedCornerShape(0.dp)
                                         )
                                         .padding( vertical = 10.dp )
                                         .clickable( onClick = ::onConfirm )

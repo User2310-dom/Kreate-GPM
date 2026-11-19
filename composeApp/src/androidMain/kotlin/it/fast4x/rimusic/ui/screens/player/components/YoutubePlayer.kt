@@ -66,7 +66,7 @@ fun YoutubePlayer(
             modifier = Modifier
                 .fillMaxSize()
                 //.padding(8.dp)
-                //.clip(RoundedCornerShape(10.dp))
+                //.clip(RoundedCornerShape(0.dp))
                 .zIndex(2f),
             factory = {
                 val iFramePlayerOptions = IFramePlayerOptions.Builder(context)

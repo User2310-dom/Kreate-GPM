@@ -113,14 +113,14 @@ class ColorPickerDialog(
                             .height( 15.dp )
                             .background(
                                 Brush.horizontalGradient( hueColors ),
-                                shape = RoundedCornerShape( 2.dp )
+                                shape = RoundedCornerShape(0.dp)
                             )
                 )
             },
             thumb = {
                 Box(
                     Modifier.size( 10.dp, 24.dp )
-                            .border( 2.dp, colorPalette().text, RoundedCornerShape(2.dp) )
+                            .border( 2.dp, colorPalette().text, RoundedCornerShape(0.dp) )
                 )
             }
         )

@@ -156,7 +156,7 @@ private fun ContentDrawScope.drawScrubber(
     drawRoundRect(
         color, topLeft = Offset(scrubberPosition - 5f, (size.height - height.toPx()) / 2),
         size = Size(10f, height.toPx()),
-        cornerRadius = CornerRadius(5f)
+        cornerRadius = CornerRadius.Zero
     )
 }
 

@@ -31,7 +31,7 @@ fun FolderItem(
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy( 12.dp ),
-        modifier = modifier.clip( RoundedCornerShape(10.dp) )
+        modifier = modifier.clip( RoundedCornerShape(0.dp) )
                            .fillMaxWidth()
                            .padding(
                                vertical = Dimensions.itemsVerticalPadding,

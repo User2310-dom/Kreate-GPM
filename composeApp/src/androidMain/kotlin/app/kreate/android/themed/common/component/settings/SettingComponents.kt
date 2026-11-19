@@ -677,7 +677,7 @@ object SettingComponents {
             Box(
                 Modifier
                     .size(24.dp)
-                    .background(dialog.color, RoundedCornerShape(3.dp))
+                    .background(dialog.color, RoundedCornerShape(0.dp))
             )
         }
     }

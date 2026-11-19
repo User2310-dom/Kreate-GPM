@@ -57,7 +57,7 @@ inline fun InputTextField(
     Column(
         modifier = modifier
             .padding(all = 10.dp)
-            .background(color = colorPalette().background1, shape = RoundedCornerShape(8.dp))
+            .background(color = colorPalette().background1, shape = RoundedCornerShape(0.dp))
             .padding(vertical = 16.dp)
             .defaultMinSize(Dp.Unspecified, 190.dp)
     ) {

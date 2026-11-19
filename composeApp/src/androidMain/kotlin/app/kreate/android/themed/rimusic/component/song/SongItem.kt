@@ -86,7 +86,7 @@ object SongItem: Visual() {
     const val BADGES_SPACING = 3
     const val LIKE_ICON_SIZE = 12
 
-    val itemShape: Shape by lazy { RoundedCornerShape(10.dp) }
+    val itemShape: Shape by lazy { RoundedCornerShape(0.dp) }
     override val thumbnailRoundnessPercent: Preferences.Int = Preferences.SONG_THUMBNAIL_ROUNDNESS_PERCENT
 
     override fun thumbnailSize() = DpSize(Preferences.SONG_THUMBNAIL_SIZE.value.dp, Preferences.SONG_THUMBNAIL_SIZE.value.dp)

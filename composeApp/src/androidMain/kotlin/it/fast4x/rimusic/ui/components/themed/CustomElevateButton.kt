@@ -23,7 +23,7 @@ fun CustomElevatedButton(
     onClick: () -> Unit,
     backgroundColor: Color,
     modifier: Modifier = Modifier,
-    shape: Shape = RoundedCornerShape(8.dp),
+    shape: Shape = RoundedCornerShape(0.dp),
     content: @Composable BoxScope.() -> Unit
 ) {
     val interSource = remember { MutableInteractionSource() }

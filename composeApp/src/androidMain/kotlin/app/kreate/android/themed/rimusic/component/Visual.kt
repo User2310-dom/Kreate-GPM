@@ -4,8 +4,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.requiredSize
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -22,12 +20,7 @@ import app.kreate.android.coil3.ImageFactory
 abstract class Visual {
 
     companion object {
-        fun getShape( percent: Int ): Shape =
-            when( percent ) {
-                0 -> RectangleShape
-                50 -> CircleShape
-                else -> RoundedCornerShape(percent)
-            }
+        fun getShape( @Suppress("UNUSED_PARAMETER") percent: Int ): Shape = RectangleShape
     }
 
     protected abstract val thumbnailRoundnessPercent: Preferences.Int

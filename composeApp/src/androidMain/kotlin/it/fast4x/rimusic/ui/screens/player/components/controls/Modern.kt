@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material3.Icon
@@ -36,6 +35,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -375,8 +375,8 @@ fun ControlsModern(
           onClick = {},
           modifier = Modifier
               .size(55.dp)
-              .doubleShadowDrop(RoundedCornerShape(8.dp), 4.dp, 8.dp)
-              .clip(RoundedCornerShape(8.dp))
+              .doubleShadowDrop(RoundedCornerShape(0.dp), 4.dp, 8.dp)
+              .clip(RoundedCornerShape(0.dp))
               .combinedClickable(
                   indication = ripple(bounded = true),
                   interactionSource = remember { MutableInteractionSource() },
@@ -404,7 +404,7 @@ fun ControlsModern(
           Box(
              contentAlignment = Alignment.Center,
              modifier = Modifier
-                 .clip(CircleShape)
+                 .clip(RectangleShape)
                  .combinedClickable(
                      indication = ripple(bounded = false),
                      interactionSource = remember { MutableInteractionSource() },
@@ -439,7 +439,7 @@ fun ControlsModern(
                   modifier = Modifier
                       .rotate(rotationAngle)
                       .dropShadow(
-                          CircleShape,
+                          RectangleShape,
                           if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) Color.Black.copy(0.75f) else Color.Transparent,
                           6.dp,
                           0.dp,
@@ -466,8 +466,8 @@ fun ControlsModern(
               backgroundColor = colorPalette().background2.copy(0.95f),
               onClick = {},
               modifier = Modifier
-                  .doubleShadowDrop(RoundedCornerShape(8.dp), 4.dp, 8.dp)
-                  .clip(RoundedCornerShape(8.dp))
+                  .doubleShadowDrop(RoundedCornerShape(0.dp), 4.dp, 8.dp)
+                  .clip(RoundedCornerShape(0.dp))
                   .combinedClickable(
                       indication = ripple(bounded = true),
                       interactionSource = remember { MutableInteractionSource() },
@@ -543,8 +543,8 @@ fun ControlsModern(
         onClick = {},
         modifier = Modifier
             .size(55.dp)
-            .doubleShadowDrop(RoundedCornerShape(8.dp), 4.dp, 8.dp)
-            .clip(RoundedCornerShape(8.dp))
+            .doubleShadowDrop(RoundedCornerShape(0.dp), 4.dp, 8.dp)
+            .clip(RoundedCornerShape(0.dp))
             .combinedClickable(
                 indication = ripple(bounded = true),
                 interactionSource = remember { MutableInteractionSource() },
@@ -555,7 +555,7 @@ fun ControlsModern(
                 },
                 onLongClick = {}
             )
-            .clip(RoundedCornerShape(8.dp))
+            .clip(RoundedCornerShape(0.dp))
 
       ) {
           Image(

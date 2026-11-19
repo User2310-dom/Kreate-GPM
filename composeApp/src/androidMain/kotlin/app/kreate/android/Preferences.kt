@@ -817,13 +817,13 @@ sealed class Preferences<T>(
             Int(preferences, Key.SONG_THUMBNAIL_ROUNDNESS_PERCENT, "", 0)
         }
         val ALBUM_THUMBNAIL_ROUNDNESS_PERCENT by lazy {
-            Int(preferences, Key.ALBUM_THUMBNAIL_ROUNDNESS_PERCENT, "", 10)
+            Int(preferences, Key.ALBUM_THUMBNAIL_ROUNDNESS_PERCENT, "", 0)
         }
         val ARTIST_THUMBNAIL_ROUNDNESS_PERCENT by lazy {
-            Int(preferences, Key.ARTIST_THUMBNAIL_ROUNDNESS_PERCENT, "", 50)
+            Int(preferences, Key.ARTIST_THUMBNAIL_ROUNDNESS_PERCENT, "", 0)
         }
         val PLAYLIST_THUMBNAIL_ROUNDNESS_PERCENT by lazy {
-            Int(preferences, Key.PLAYLIST_THUMBNAIL_ROUNDNESS_PERCENT, "", 10)
+            Int(preferences, Key.PLAYLIST_THUMBNAIL_ROUNDNESS_PERCENT, "", 0)
         }
         //</editor-fold>
 
@@ -837,7 +837,7 @@ sealed class Preferences<T>(
             Enum( preferences, Key.MAIN_THEME, "UiType", UiType.RiMusic )
         }
         val COLOR_PALETTE by lazy {
-            Enum( preferences, Key.COLOR_PALETTE, "colorPaletteName", ColorPaletteName.Dynamic )
+            Enum( preferences, Key.COLOR_PALETTE, "colorPaletteName", ColorPaletteName.Default )
         }
         val THEME_MODE by lazy {
             Enum( preferences, Key.THEME_MODE, "colorPaletteMode", ColorPaletteMode.Dark )
@@ -858,7 +858,7 @@ sealed class Preferences<T>(
             Enum( preferences, Key.PAUSE_BETWEEN_SONGS, "pauseBetweenSongs", PauseBetweenSongs.`0` )
         }
         val THUMBNAIL_BORDER_RADIUS by lazy {
-            Enum( preferences, Key.THUMBNAIL_BORDER_RADIUS, "thumbnailRoundness", ThumbnailRoundness.Heavy )
+            Enum( preferences, Key.THUMBNAIL_BORDER_RADIUS, "thumbnailRoundness", ThumbnailRoundness.None )
         }
         val TRANSITION_EFFECT by lazy {
             Enum( preferences, Key.TRANSITION_EFFECT, "transitionEffect", TransitionEffect.Scale )

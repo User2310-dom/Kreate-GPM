@@ -105,7 +105,7 @@ class HorizontalNavigationBar(
                     TextIconButton( text, iconId, color, 0.dp, Dimensions.navigationRailIconOffset * 3 )
 
             val contentModifier = Modifier
-                .clip(RoundedCornerShape(12.dp))
+                .clip(RoundedCornerShape(0.dp))
                 .clickable(onClick = { onTabChanged(index) })
 
             addButton( button, contentModifier )
@@ -160,9 +160,9 @@ class HorizontalNavigationBar(
                 val scrollState = rememberScrollState()
                 val roundedCornerShape =
                     if ( NavigationBarPosition.Bottom.isCurrent() )
-                        RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp)
+                        RoundedCornerShape(0.dp)
                     else
-                        RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp)
+                        RoundedCornerShape(0.dp)
 
                 // Settings button only visible when
                 // UI is not RiMusic and current location isn't home screen

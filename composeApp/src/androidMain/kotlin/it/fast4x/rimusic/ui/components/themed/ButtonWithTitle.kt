@@ -39,7 +39,7 @@ fun ButtonWithTitle(
             contentAlignment = Alignment.Center,
             modifier = Modifier
                 .size(48.dp)
-                .clip(RoundedCornerShape(16.dp))
+                .clip(RoundedCornerShape(0.dp))
                 .background(colorPalette().favoritesIcon)
                 .clickable(onClick = onClick)
         ) {

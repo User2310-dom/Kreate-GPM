@@ -78,7 +78,7 @@ fun SwipeableContent(
             gesturesEnabled = isSwipeToActionEnabled,
             modifier = modifier,
             //.padding(horizontal = 16.dp)
-            //.clip(RoundedCornerShape(12.dp)),
+            //.clip(RoundedCornerShape(0.dp)),
             state = dismissState,
             backgroundContent = {
                 Row(

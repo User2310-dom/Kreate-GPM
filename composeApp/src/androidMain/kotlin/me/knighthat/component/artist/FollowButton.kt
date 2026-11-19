@@ -90,7 +90,7 @@ class FollowButton private constructor(
                                    width = 100.dp,
                                    height = TabToolBar.TOOLBAR_ICON_SIZE
                                )
-                               .clip( RoundedCornerShape(50) )
+                               .clip( RoundedCornerShape(0.dp) )
                                .background( buttonProps.second )
                                .clickable( onClick = ::onShortClick ),
             contentAlignment = Alignment.Center

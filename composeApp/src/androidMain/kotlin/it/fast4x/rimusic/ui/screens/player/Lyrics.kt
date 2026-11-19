@@ -645,7 +645,7 @@ fun Lyrics(
                                 isPicking = true
                             },
                             modifier = Modifier
-                                .background(shape = RoundedCornerShape(4.dp), color = Color.White)
+                                .background(shape = RoundedCornerShape(0.dp), color = Color.White)
                                 .padding(all = 4.dp)
                                 .size(24.dp)
                                 .align(Alignment.CenterVertically)
@@ -751,7 +751,7 @@ fun Lyrics(
                                             },
                                             modifier = Modifier
                                                 .background(
-                                                    shape = RoundedCornerShape(4.dp),
+                                                    shape = RoundedCornerShape(0.dp),
                                                     color = Color.White
                                                 )
                                                 .padding(all = 4.dp)
@@ -1316,7 +1316,7 @@ fun Lyrics(
                                                 ) else if (lyricsHighlight == LyricsHighlight.Black) Color.Black.copy(
                                                     0.5f
                                                 ) else Color.Transparent else Color.Transparent,
-                                                RoundedCornerShape(6.dp)
+                                                RoundedCornerShape(0.dp)
                                             )
                                             .conditional(lyricsHighlight != LyricsHighlight.None) { fillMaxWidth() }
                                     )
@@ -1782,7 +1782,7 @@ fun Lyrics(
                         Box(modifier = Modifier
                             .align(Alignment.Center)
                             .size(45.dp)
-                            .background(colorPalette().accent, RoundedCornerShape(15.dp))
+                            .background(colorPalette().accent, RoundedCornerShape(0.dp))
                         ){}
                         Image(
                             painter = painterResource(if (player.isPlaying == true) R.drawable.pause else R.drawable.play),

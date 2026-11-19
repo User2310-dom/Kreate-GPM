@@ -25,7 +25,7 @@ fun PrimaryButton(
 ) {
     Box(
         modifier = modifier
-            .clip(RoundedCornerShape(16.dp))
+            .clip(RoundedCornerShape(0.dp))
             .clickable(enabled = enabled, onClick = onClick)
             .background(colorPalette().background2)
             .size(62.dp)

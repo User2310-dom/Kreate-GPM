@@ -110,7 +110,7 @@ interface Dialog {
                                    )
                                    .background(
                                        color = colorPalette().background0,
-                                       shape = RoundedCornerShape( 8.dp )
+                                       shape = RoundedCornerShape(0.dp)
                                    )
                                    .padding( vertical = VERTICAL_PADDING.dp ),
                 horizontalAlignment = Alignment.CenterHorizontally

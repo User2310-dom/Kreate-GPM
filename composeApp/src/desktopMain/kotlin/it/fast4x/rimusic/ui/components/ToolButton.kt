@@ -34,7 +34,7 @@ fun ToolButton(
                 onAction()
             }
             .sizeIn(size+12.dp, size+12.dp)
-            .border(1.dp, Color.White.copy(alpha = 0.2f), RoundedCornerShape(size/2))
+            .border(1.dp, Color.White.copy(alpha = 0.2f), RoundedCornerShape(0.dp))
     ){
         Image(
             painter = painterResource(icon),

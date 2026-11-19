@@ -448,7 +448,7 @@ fun ControlsEssential(
                 onLongClick = onShowSpeedPlayerDialog
             )
             .bounceClick()
-            .clip(RoundedCornerShape(playPauseRoundness))
+            .clip(RoundedCornerShape(0.dp))
             .background(
                 when (colorPaletteName) {
                     ColorPaletteName.Dynamic, ColorPaletteName.Default,

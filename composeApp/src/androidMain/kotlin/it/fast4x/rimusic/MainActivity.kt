@@ -363,12 +363,6 @@ MainActivity :
 
                     val fontType by Preferences.FONT
 
-                    if (colorPaletteName == ColorPaletteName.MaterialYou) {
-                        colorPalette = dynamicColorPaletteOf(
-                            Color(monet.getAccentColor(this@MainActivity)),
-                            !lightTheme
-                        )
-                    }
                     if (colorPaletteName == ColorPaletteName.CustomColor) {
                         colorPalette = dynamicColorPaletteOf(
                             customColor,
@@ -520,13 +514,6 @@ MainActivity :
                                     }
 
                                 } else {
-
-                                    if (colorPaletteName == ColorPaletteName.MaterialYou) {
-                                        colorPalette = dynamicColorPaletteOf(
-                                            Color(monet.getAccentColor(this@MainActivity)),
-                                            !lightTheme
-                                        )
-                                    }
 
                                     if (colorPaletteName == ColorPaletteName.Customized) {
                                         colorPalette = customColorPalette(
@@ -1070,16 +1057,6 @@ MainActivity :
         monetColors: ColorScheme,
         isInitialChange: Boolean
     ) {
-        val colorPaletteName by Preferences.COLOR_PALETTE
-        if (!isInitialChange && colorPaletteName == ColorPaletteName.MaterialYou) {
-            /*
-            monet.updateMonetColors()
-            monet.invokeOnReady {
-                startApp()
-            }
-             */
-            this@MainActivity.recreate()
-        }
     }
 
 

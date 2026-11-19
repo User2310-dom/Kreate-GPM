@@ -36,7 +36,6 @@ fun MusicAnimation(
     color: Color,
     modifier: Modifier = Modifier,
     barWidth: Dp = 6.dp,
-    cornerRadius: Dp = 8.dp,
     show: Boolean = true,
     player: StatefulPlayer = koinInject()
 ) {
@@ -175,7 +174,7 @@ fun MusicAnimation(
                             color = color,
                             topLeft = Offset(x = 0f, y = size.height * (1 - animatable.value)),
                             size = size.copy(height = animatable.value * size.height),
-                            cornerRadius = CornerRadius(cornerRadius.toPx())
+                            cornerRadius = CornerRadius.Zero
                         )
                         MusicAnimationType.CrazyBars, MusicAnimationType.CrazyPoints -> drawLine(
                             color = color,

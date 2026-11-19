@@ -192,7 +192,7 @@ fun MiniPlayer(
     SwipeToDismissBox(
         modifier = Modifier
             .padding(horizontal = 16.dp)
-            .clip(RoundedCornerShape(12.dp)),
+            .clip(RoundedCornerShape(0.dp)),
         state = dismissState,
         backgroundContent = {
             /*
@@ -373,7 +373,7 @@ fun MiniPlayer(
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(playPauseRoundness))
+                        .clip(RoundedCornerShape(0.dp))
                         .clickable {
                             if (shouldBePlaying) {
                                 player.pause()

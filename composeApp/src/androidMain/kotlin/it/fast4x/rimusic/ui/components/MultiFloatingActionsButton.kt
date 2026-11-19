@@ -28,7 +28,6 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.SmallFloatingActionButton
@@ -45,6 +44,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.graphicsLayer
@@ -177,7 +177,7 @@ fun MultiFloatingActionsButton (
 
                             }
                         }
-                        .clip(RoundedCornerShape(16.dp))
+                        .clip(RoundedCornerShape(0.dp))
                         //.background(colorPalette().favoritesIcon)
                         .background(colorPalette().background2)
                         //.padding(all = 20.dp)
@@ -266,7 +266,7 @@ fun SmallFloatingActionButtonRow(
             )
         }
         SmallFloatingActionButton(
-            shape = CircleShape,
+            shape = RectangleShape,
             modifier = Modifier
                 .padding(4.dp),
             onClick = { item.onFabItemClicked() },

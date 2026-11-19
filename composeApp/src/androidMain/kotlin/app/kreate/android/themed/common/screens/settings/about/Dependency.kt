@@ -111,7 +111,7 @@ data class Dependency(
                                .border(
                                    width = 2.dp,
                                    color = colorPalette.textDisabled,
-                                   shape = RoundedCornerShape(5.dp)
+                                   shape = RoundedCornerShape(0.dp)
                                )
                                .padding( all = 10.dp )
         ) {

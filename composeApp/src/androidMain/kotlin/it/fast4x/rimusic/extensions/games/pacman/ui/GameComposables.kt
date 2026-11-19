@@ -80,7 +80,7 @@ fun FullScreenDialog(showDialog: MutableState<Boolean>, text: String) {
         ) {
             Surface(
                 modifier = Modifier.wrapContentSize(),
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(0.dp),
                 color = PacmanYellow
             ) {
                 Box(

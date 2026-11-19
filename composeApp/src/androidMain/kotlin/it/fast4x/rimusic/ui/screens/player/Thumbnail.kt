@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -199,9 +198,9 @@ fun Thumbnail(
                         .fillMaxSize()
                         //.dropShadow(thumbnailShape(), colorPalette().overlay.copy(0.1f), 6.dp, 2.dp, 2.dp)
                         //.dropShadow(thumbnailShape(), colorPalette().overlay.copy(0.1f), 6.dp, (-2).dp, (-2).dp)
-                        .doubleShadowDrop(if (showCoverThumbnailAnimation) CircleShape else thumbnailShape(), 4.dp, 8.dp)
+                        .doubleShadowDrop(thumbnailShape(), 4.dp, 8.dp)
                         //.clip(thumbnailShape())
-                        .clip(if (showCoverThumbnailAnimation) CircleShape else thumbnailShape())
+                        .clip(thumbnailShape())
                 //.padding(14.dp)
                 else modifierUiType = modifier
                     .aspectRatio(1f)
@@ -209,7 +208,7 @@ fun Thumbnail(
                     //.padding(14.dp)
                     .fillMaxSize()
                     //.clip(thumbnailShape())
-                    .clip(if (showCoverThumbnailAnimation) CircleShape else thumbnailShape())
+                    .clip(thumbnailShape())
 
 
 

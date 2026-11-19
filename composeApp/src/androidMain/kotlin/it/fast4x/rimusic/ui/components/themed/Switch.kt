@@ -42,7 +42,7 @@ fun Switch(
     ) {
         drawRoundRect(
             color = backgroundColor,
-            cornerRadius = CornerRadius(x = 12.dp.toPx(), y = 12.dp.toPx()),
+            cornerRadius = CornerRadius.Zero,
         )
 
         drawCircle(

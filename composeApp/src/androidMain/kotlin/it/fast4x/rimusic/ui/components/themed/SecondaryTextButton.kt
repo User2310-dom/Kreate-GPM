@@ -26,7 +26,7 @@ fun SecondaryTextButton(
         text = text,
         style = typography().xxs.medium,
         modifier = modifier
-            .clip(RoundedCornerShape(16.dp))
+            .clip(RoundedCornerShape(0.dp))
             .clickable(enabled = enabled, onClick = onClick)
             .background(if (alternative) colorPalette().background0 else colorPalette().primaryButton)
             .padding(all = 8.dp)

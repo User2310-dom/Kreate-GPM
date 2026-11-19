@@ -270,7 +270,7 @@ object PlaylistItem: Visual(), MultiplatformItem {
             modifier = modifier
                 .background(
                     color = values.songCountBackgroundColor,
-                    shape = RoundedCornerShape(4.dp)
+                    shape = RoundedCornerShape(0.dp)
                 )
                 .padding(all = 4.dp)
         )

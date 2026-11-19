@@ -142,7 +142,7 @@ abstract class Dialog {
                                    )
                                    .background(
                                        color = colorPalette.background1,
-                                       shape = RoundedCornerShape( 8.dp )
+                                       shape = RoundedCornerShape(0.dp)
                                    )
                                    .padding( vertical = VERTICAL_PADDING.dp )
             ) {

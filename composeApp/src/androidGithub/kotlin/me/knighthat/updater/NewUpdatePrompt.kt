@@ -148,7 +148,7 @@ object NewUpdatePrompt: InteractiveDialog {
         Row(
             horizontalArrangement = Arrangement.Center,
             modifier = Modifier.fillMaxWidth( .9f )
-                               .clip( RoundedCornerShape(20) )
+                               .clip( RoundedCornerShape(0.dp) )
                                .border( 3.dp, colorPalette().background2 )
                                .clickable { hideDialog() }
         ) {

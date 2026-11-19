@@ -81,8 +81,8 @@ fun FluidGradientBox() {
                 .onSizeChanged {
                     size = Size(it.width.toFloat(), it.height.toFloat())
                 }
-                .clip(RoundedCornerShape(16.dp))
-                .border(1.dp, Color.White, RoundedCornerShape(16.dp))
+                .clip(RoundedCornerShape(0.dp))
+                .border(1.dp, Color.White, RoundedCornerShape(0.dp))
                 .drawBehind {
                     drawRect(brush = brushA)
                     drawRect(brush = brushMask, blendMode = BlendMode.DstOut)
@@ -91,7 +91,7 @@ fun FluidGradientBox() {
             contentAlignment = Alignment.Center
         ) {
             Text(
-                modifier = Modifier.border(1.dp, Color.White, RoundedCornerShape(4.dp))
+                modifier = Modifier.border(1.dp, Color.White, RoundedCornerShape(0.dp))
                     .padding(horizontal = 8.dp, vertical = 4.dp),
                 text = "FLUID",
                 style = MaterialTheme.typography.headlineLarge,
